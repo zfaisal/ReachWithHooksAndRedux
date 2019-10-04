@@ -9,6 +9,8 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {routerMiddleware, connectRouter } from 'connected-react-router';
 import rootReducer from './store/reducers'
+import 'react-app-polyfill/ie9';
+import 'react-app-polyfill/ie11';
 
 const history = createHashHistory();
 const composeEnhancers = compose;

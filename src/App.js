@@ -8,7 +8,6 @@ import Navi from './components/Nav';
 function App() {
   return (
     <div className="App">
-      
         <BrowserRouter>
          <Navi></Navi>
           <Switch>

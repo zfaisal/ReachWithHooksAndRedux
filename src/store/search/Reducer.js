@@ -6,6 +6,12 @@ const ACTION_HANDLERS = {
         const tempState = Object.assign({}, state);
         tempState.imageUrl = action.imageUrl;
         return Object.assign({}, state, tempState);
+    }, 
+
+    [Actions.GET_PLAYERS]: (state, action) => {
+        var tempState = Object.assign({}, state);
+        tempState.players = action.players;
+        return tempState;
     }
 };
 
