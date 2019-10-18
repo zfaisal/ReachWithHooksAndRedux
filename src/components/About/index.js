@@ -2,56 +2,38 @@ import React, {Fragment, PureComponent, useState, useRef, useEffect, useContext,
 import { bindActionCreators } from "redux";
 import connect from "react-redux/es/connect/connect";
 import PropTypes from 'prop-types';
-import {ConfigContext} from '../../App';
-import ReactDataSheet from 'react-datasheet';
-import 'react-datasheet/lib/react-datasheet.css';
-import * as $ from 'jquery'
+import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
+//import 'node_modules/react-bootstrap-table/dist/react-bootstrap-table-all.min.css';
 
 function About(props) {
 
 
-    const [grid, setGridData] = useState([
-        [{value:  1}, {value:  3}],
-        [{value:  2}, {value:  4}]
-      ])
+
 
     useEffect(() => {
-        $(".data-grid-container .data-grid .cell .data-editor").css({
-            height: '30px !important' 
-        })
+     
     })
+    var products = [{
+        id: 1,
+        name: "Product1",
+        price: 120
+    }, {
+        id: 2,
+        name: "Product2",
+        price: 80
+    }];
     
 
     return (
         
 
         <div>
-           
-            <div> this is the About page</div>
-            <br  />
-            <ReactDataSheet
-                data={grid}
-                valueRenderer={(cell) => {
-
-
-                    cell.width = 100
-                    cell.height = 50
-                    return cell.value
-                }}
-                width="100"
-                onChange={(change, i , j , newValue) => {
-                    // change[i,j] 
-                    change.width = 100
-                   grid[i][j].value = newValue
-                    console.log(grid)
-                    setGridData(grid)
-                    console.log('change', change, newValue, i, j)
-                    $(".data-grid-container .data-grid .cell .data-editor").css({
-                        height: '30px !important' 
-                    })
-                    
-                }}
-                />
+         <BootstrapTable data={products} striped hover>
+      <TableHeaderColumn isKey dataField='id'>Product ID</TableHeaderColumn>
+      <TableHeaderColumn dataField='name' filter={ { type: 'TextFilter', delay: 1000 } }>Product Name</TableHeaderColumn>
+      <TableHeaderColumn dataField='price'>Product Price</TableHeaderColumn>
+  </BootstrapTable>
+  
         </div>
         
     );
