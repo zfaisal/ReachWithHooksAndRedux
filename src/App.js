@@ -8,7 +8,7 @@ import Navi from './components/Nav';
 function App() {
   return (
     <div className="App">
-        <BrowserRouter>
+        <BrowserRouter basename="/dev/ui">
          <Navi></Navi>
           <Switch>
             <Route path="/" exact component={SearchBox} ></Route>
