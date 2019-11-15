@@ -10,11 +10,19 @@ import { faHome, faCheck } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import * as _ from 'underscore'
 
+import ReactDataSheet from 'react-datasheet'
+
 import './index.css'
 
 function About(props) {
 
     const [selectedData, setSelectedData] = useState([])
+    const [grid, setGrid] = useState([
+                                        [{value:  1, className:'test'}, {value:  3}],
+                                        [{value:  2}, {value:  4}]
+                                    ]);
+
+    
     
     var rows = []
 
@@ -150,6 +158,14 @@ function About(props) {
               className="mdb-table"
               data={data}
             />
+
+<ReactDataSheet
+        data={grid}
+        valueRenderer={(cell) => cell.value}
+        onCellsChanged={changes => {
+         
+        }}
+      />
          </div>
             
 

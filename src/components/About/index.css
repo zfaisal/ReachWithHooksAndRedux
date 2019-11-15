@@ -36,3 +36,7 @@
   .hidden {
       display: none;
   }
+
+  .test span {
+    background: green !important;
+  }
