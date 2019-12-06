@@ -14,13 +14,42 @@ import ReactDataSheet from 'react-datasheet'
 
 import './index.css'
 
+const url = "http://vegeta-001-site1.itempurl.com";
+
 function Home(props) {
 
       
+    const [players, setPlayers] = useState([]);
+    const [loader, setLoader] = useState(1);
+
+    useEffect(() => {
+
+      if(loader == 1)
+        getAllOlayers();
+
+
+    }, [loader])
+   
+    var getAllOlayers = function() {
+       $.get({
+         url: url + "/api/players",
+         type: 'GET',
+         ataType: 'json', 
+         success: function(response) {
+           console.log("response", response)
+           setPlayers(response.AllPlayers)
+           setLoader(2)
+         },
+         error: function(xhr, ajaxOptions, thrownError) {
+           
+         }
+       })
+    }
+
 
     return (
         <div>
-          This the home page
+          {players.length}
         </div>
         
     );
