@@ -4,6 +4,8 @@ import SearchBox from './components/searchBox';
 import './App.css';
 import About from './components/About';
 import Navi from './components/Nav';
+import Home from './pages/Home';
+
 
 function App() {
   return (
@@ -11,7 +13,7 @@ function App() {
         <BrowserRouter basename="/dev/ui">
          <Navi></Navi>
           <Switch>
-            <Route path="/" exact component={SearchBox} ></Route>
+            <Route path="/" exact component={Home} ></Route>
             <Route path="/about" exact component={About} ></Route>
           </Switch>
         </BrowserRouter>
