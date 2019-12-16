@@ -25,7 +25,14 @@ function Navi(props) {
   <LinkContainer to="/about">
     <NavItem >About</NavItem>
   </LinkContainer>
-      
+  &nbsp; &nbsp;
+  <LinkContainer to="/editable">
+    <NavItem >Editable</NavItem>
+  </LinkContainer> 
+  &nbsp; &nbsp;
+  <LinkContainer to="/stripe">
+    <NavItem >Stripe</NavItem>
+  </LinkContainer> 
     </Nav>
     
   </Navbar.Collapse>
