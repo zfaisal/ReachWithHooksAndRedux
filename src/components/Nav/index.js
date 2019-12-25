@@ -21,11 +21,11 @@ function Navi(props) {
     <LinkContainer to="/">
     <NavItem >Home</NavItem>
   </LinkContainer>
-   &nbsp; &nbsp;
+   {/* &nbsp; &nbsp;
   <LinkContainer to="/about">
     <NavItem >About</NavItem>
   </LinkContainer>
-      
+       */}
     </Nav>
     
   </Navbar.Collapse>

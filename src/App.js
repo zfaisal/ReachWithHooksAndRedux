@@ -14,7 +14,7 @@ function App() {
          <Navi></Navi>
           <Switch>
             <Route path="/" exact component={Home} ></Route>
-            <Route path="/about" exact component={About} ></Route>
+            {/* <Route path="/about" exact component={About} ></Route> */}
           </Switch>
         </BrowserRouter>
     </div>
