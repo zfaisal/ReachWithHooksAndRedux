@@ -32,7 +32,7 @@ function SiteCarousal(props) {
                 className="d-block w-100"
                 src="https://es-cms-prod.s3.amazonaws.com/filer/74/05/740511e0-a969-411f-8321-a6cc8f1faddd/01_how-to-save-energy-costs-.png"
                 alt="First slide"
-                style={{height:"200px"}}
+                style={{height:"180px"}}
               />
               <Carousel.Caption>
                 <h3>Save on Electric Bills</h3>
@@ -44,7 +44,7 @@ function SiteCarousal(props) {
                 className="d-block w-100"
                 src="https://www.homeinsulations.co.za/wp-content/uploads/2016/12/advantages-of-solar-energy-in-south-africa-1024x1024.jpg"
                 alt="First slide"
-                style={{height:"200px"}}
+                style={{height:"180px"}}
               />
               <Carousel.Caption>
                 <h3>Use solar energy to power your home</h3>
@@ -56,7 +56,7 @@ function SiteCarousal(props) {
                 className="d-block w-100"
                 src="https://www.roofkingnc.com/wp-content/uploads/Solar-Panel-Roof-Small-min.png"
                 alt="First slide"
-                style={{height:"200px"}}
+                style={{height:"180px"}}
               />
               <Carousel.Caption>
                 <h3>Easy installations and maintenence</h3>

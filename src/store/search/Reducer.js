@@ -12,6 +12,12 @@ const ACTION_HANDLERS = {
         var tempState = Object.assign({}, state);
         tempState.players = action.players;
         return tempState;
+    },
+
+    [Actions.SAVE_USER_INFO]: (state, action) => {
+        var tempState = Object.assign({}, state);
+        tempState.userInfoResponse = action.userInfoResponse;
+        return tempState;
     }
 };
 

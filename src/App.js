@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App">
         <BrowserRouter basename="/dev/ui">
-         <Navi></Navi>
+         {/* <Navi></Navi> */}
           <Switch>
             <Route path="/" exact component={Home} ></Route>
             {/* <Route path="/about" exact component={About} ></Route> */}

@@ -21,10 +21,12 @@ import './index.css'
 import SiteCarousal from '../../components/Carousal';
 import UserForm from '../../components/UserForm';
 
+import {
+  saveUserInfo
+} from '../../store/search/Actions';
 
 function Home(props) {
 
-    
 
     return (
         <div>
@@ -34,7 +36,7 @@ function Home(props) {
           </Grid>
           <Grid item xs={12}>
          
-            <UserForm />
+            <UserForm saveUserInfo={props.saveUserInfo} userInfoResponse={props.userInfoResponse} />
          
           </Grid>
          
@@ -47,5 +49,19 @@ function Home(props) {
 
 
 
+const mapDispatchToProps = (dispatch) => {
+  return {
+      saveUserInfo: bindActionCreators(saveUserInfo, dispatch)
+      
+  };
+};
 
-export default Home
+export function mapStateToProps(state) {
+
+  return {
+      userInfoResponse: state.search.userInfoResponse
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);
+// export default Home

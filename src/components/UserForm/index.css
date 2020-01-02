@@ -1,0 +1,12 @@
+.form-userdata {
+    z-index: 1;
+}
+
+.form-userdata::after {
+    z-index: -1;
+    content: url('https://chinadialogue-production.s3.amazonaws.com/uploads/content/image/11575/K79982_web.jpg');
+    opacity: 0.1;
+    position: absolute;
+    top: 0;
+    left:0;
+}

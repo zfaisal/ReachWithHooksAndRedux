@@ -1,6 +1,7 @@
 let _initialState = {
     imageUrl: '',
-    players: []
+    players: [],
+    userInfoResponse: {}
 };
 
 export const INITIAL_STATE = _initialState;
