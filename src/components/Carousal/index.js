@@ -11,8 +11,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import * as _ from 'underscore'
 
 import ReactDataSheet from 'react-datasheet'
-import Carousel from 'react-bootstrap/Carousel'
-import './index.css'
+import Carousel from 'react-bootstrap/Carousel';
+import './index.css';
+
+import saveMoneyImg from '../../assets/save-money.png';
+import useSolarImg from '../../assets/use-solar.jpg';
+import easyInstallImg from '../../assets/easy-install.png';
 
 function SiteCarousal(props) {
 
@@ -30,7 +34,7 @@ function SiteCarousal(props) {
             <Carousel.Item>
               <img
                 className="d-block w-100"
-                src="https://es-cms-prod.s3.amazonaws.com/filer/74/05/740511e0-a969-411f-8321-a6cc8f1faddd/01_how-to-save-energy-costs-.png"
+                src={saveMoneyImg}
                 alt="First slide"
                 style={{height:"180px"}}
               />
@@ -42,7 +46,7 @@ function SiteCarousal(props) {
             <Carousel.Item>
               <img
                 className="d-block w-100"
-                src="https://www.homeinsulations.co.za/wp-content/uploads/2016/12/advantages-of-solar-energy-in-south-africa-1024x1024.jpg"
+                src={useSolarImg}
                 alt="First slide"
                 style={{height:"180px"}}
               />
@@ -54,7 +58,7 @@ function SiteCarousal(props) {
             <Carousel.Item>
               <img
                 className="d-block w-100"
-                src="https://www.roofkingnc.com/wp-content/uploads/Solar-Panel-Roof-Small-min.png"
+                src={easyInstallImg}
                 alt="First slide"
                 style={{height:"180px"}}
               />
